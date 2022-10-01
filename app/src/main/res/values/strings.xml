@@ -14,4 +14,16 @@
     <string name="sensores">Sensores</string>
     <string name="griscopioTitle">Griscopio</string>
     <string name="luzTitle">Luz</string>
+    <string name="parameters_btn_txt">Paso de parámetros</string>
+    <string name="cars_btn_txt">Autos</string>
+    <string name="sensors_btn_txt">Sensores</string>
+    <string name="send">Enviar</string>
+    <string name="parameter_1">Parámetros 1</string>
+    <string name="parameter_2">Parámetros 2</string>
+    <string name="parameters_title">Parámetros</string>
+    <string name="spinner_value_label">Valor</string>
+    <string name="xxxx">XXXX</string>
+    <string name="add">Agregar</string>
+    <string name="valor">Valor</string>
+    <string name="spinner">Spinners</string>
 </resources>

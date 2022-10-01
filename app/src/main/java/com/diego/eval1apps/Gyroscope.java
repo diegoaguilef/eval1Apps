@@ -1,27 +1,31 @@
 package com.diego.eval1apps;
 
+import static android.util.Half.EPSILON;
+
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
+import static java.lang.Math.sqrt;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 
-public class Giroscopio extends AppCompatActivity {
+public class Gyroscope extends AppCompatActivity {
+
+    private SensorEvent sensorEvent;
     private SensorManager sensorManager;
     private Sensor sensor;
     private static final float NS2S = 1.0f / 1000000000.0f;
-    private final float[] deltaRotationVector = new float[4]();
+    private final float[] deltaRotationVector = new float[4];
     private float timestamp;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giroscopio);
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
     }
 
     public void onSensorChanged(SensorEvent event) {
@@ -35,7 +39,7 @@ public class Giroscopio extends AppCompatActivity {
             float axisZ = event.values[2];
 
             // Calculate the angular speed of the sample
-            float omegaMagnitude = sqrt(axisX*axisX + axisY*axisY + axisZ*axisZ);
+            float omegaMagnitude = (float) sqrt(axisX*axisX + axisY*axisY + axisZ*axisZ);
 
             // Normalize the rotation vector if it's big enough to get the axis
             // (that is, EPSILON should represent your maximum allowable margin of error)
@@ -50,8 +54,8 @@ public class Giroscopio extends AppCompatActivity {
             // We will convert this axis-angle representation of the delta rotation
             // into a quaternion before turning it into the rotation matrix.
             float thetaOverTwo = omegaMagnitude * dT / 2.0f;
-            float sinThetaOverTwo = sin(thetaOverTwo);
-            float cosThetaOverTwo = cos(thetaOverTwo);
+            float sinThetaOverTwo = (float)sin(thetaOverTwo);
+            float cosThetaOverTwo = (float)cos(thetaOverTwo);
             deltaRotationVector[0] = sinThetaOverTwo * axisX;
             deltaRotationVector[1] = sinThetaOverTwo * axisY;
             deltaRotationVector[2] = sinThetaOverTwo * axisZ;
@@ -64,6 +68,5 @@ public class Giroscopio extends AppCompatActivity {
         // in order to get the updated rotation.
         // rotationCurrent = rotationCurrent * deltaRotationMatrix;
     }
-
 
 }

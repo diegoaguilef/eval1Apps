@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Parameter">
+
+    <TextView
+        android:id="@+id/txtParameterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:gravity="center"
+        android:text="@string/parameters_title"
+        android:textSize="40dp" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtParameter1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/parameter_1" />
+
+        <EditText
+            android:id="@+id/edtParameter1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="xxxx"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/txtParameter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/parameter_2" />
+
+        <EditText
+            android:hint="yyyy"
+            android:id="@+id/edtParameter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendParametersResult"
+            android:text="@string/send" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
