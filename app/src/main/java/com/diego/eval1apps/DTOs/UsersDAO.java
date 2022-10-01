@@ -4,7 +4,7 @@ import com.diego.eval1apps.models.User;
 
 import java.util.ArrayList;
 
-public class UserDTO {
+public class UsersDAO {
     private static ArrayList<User> users = new ArrayList<>();
 
     public static void initUsers(){

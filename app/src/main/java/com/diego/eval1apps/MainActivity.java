@@ -2,18 +2,20 @@ package com.diego.eval1apps;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.diego.eval1apps.DTOs.UserDTO;
+import com.diego.eval1apps.DTOs.UsersDAO;
 import com.diego.eval1apps.models.User;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         edtName = findViewById(R.id.edtUsername);
         edtPassword = findViewById(R.id.edtPassword);
-        UserDTO.initUsers();
+        UsersDAO.initUsers();
     }
 
     private void clear(){
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         User user = new User(username, password);
         if(!username.equals("") || !password.equals("")){
-            if(UserDTO.isValid(user)){
+            if(UsersDAO.isValid(user)){
                 Intent intent = new Intent(this, Menu.class);
                 startActivity(intent);
             }else{
