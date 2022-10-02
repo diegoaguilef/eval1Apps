@@ -16,13 +16,13 @@ import java.util.List;
 public class SensorsList<sensorManager> extends AppCompatActivity {
 
     private SensorManager sensorManager;
-    private TableLayout tblValues;
+    private TableLayout tblSensors;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensors_list);
-        tblValues = findViewById(R.id.tblValues);
+        tblSensors = findViewById(R.id.tblSensors);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> deviceSensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
         for(Sensor sensor:deviceSensors){
@@ -47,7 +47,7 @@ public class SensorsList<sensorManager> extends AppCompatActivity {
         tr.addView(td);
 
         // Agrego row a al tabla
-        tblValues.addView(tr);
+        tblSensors.addView(tr);
     }
 
 }

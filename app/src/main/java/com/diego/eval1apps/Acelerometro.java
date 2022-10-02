@@ -7,7 +7,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 
-public class acelerometro extends AppCompatActivity {
+public class Acelerometro extends AppCompatActivity {
 
     private SensorManager sensorManager;
     private Sensor sensor;

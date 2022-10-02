@@ -26,4 +26,7 @@
     <string name="add">Agregar</string>
     <string name="valor">Valor</string>
     <string name="spinner">Spinners</string>
+    <string name="yTitle">Y =</string>
+    <string name="xTitle">X =</string>
+    <string name="zTitle">Z =</string>
 </resources>

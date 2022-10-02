@@ -23,10 +23,22 @@
         android:textSize="28sp"
         tools:ignore="RtlCompat" />
 
-    <TableRow
+    <TableLayout
+        android:id="@+id/tblSensors"
+        style="@style/Widget.Design.TabLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="" />
+        android:accessibilityPaneTitle="Sensors Table"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        tools:visibility="visible">
 
-
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView android:text="@string/sensores" />
+        </TableRow>
+    </TableLayout>
 </LinearLayout>

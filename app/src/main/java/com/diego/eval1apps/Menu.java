@@ -26,5 +26,10 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void sensores(View view){
+        Intent intent = new Intent(this, SensorDevice.class);
+        startActivity(intent);
+    }
+
 
 }
