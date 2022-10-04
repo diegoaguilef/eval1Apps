@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Spinner extends AppCompatActivity {
 
@@ -26,6 +27,7 @@ public class Spinner extends AppCompatActivity {
     }
 
     private void addValueToTable(String value){
+
         //Genero un row nuevo
         TableRow tr = new TableRow(this);
         tr.setLayoutParams(new TableLayout.LayoutParams(
@@ -48,6 +50,10 @@ public class Spinner extends AppCompatActivity {
     public void addValue(View view) {
         //Obtengo valor del input
         String value = edtSpinnerValue.getText().toString();
-        addValueToTable(value);
+        if(!value.equals("")){
+            addValueToTable(value);
+        }else{
+            Toast.makeText(this, "Debe ingresar un valor", Toast.LENGTH_LONG).show();
+        }
     }
 }

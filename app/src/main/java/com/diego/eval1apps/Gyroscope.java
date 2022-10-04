@@ -28,7 +28,7 @@ public class Gyroscope extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giroscopio);
-
+        setTitle("Sensor Giroscopio");
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
@@ -51,15 +51,13 @@ public class Gyroscope extends AppCompatActivity {
 
     public SensorEventListener gyroListener = new SensorEventListener() {
         @Override
-        public void onSensorChanged(SensorEvent sensorEvent) {
-            float x = sensorEvent.values[0];
-            float y = sensorEvent.values[1];
-            float z = sensorEvent.values[2];
-
-            textX.setText("X: " + x);
-            textY.setText("Y: " + y);
-            textZ.setText("Z: " + z);
-
+        public void onSensorChanged(SensorEvent event) {
+            float axisX = event.values[0];
+            float axisY = event.values[1];
+            float axisZ = event.values[2];
+            textX.setText("X: "+ axisX);
+            textY.setText("Y: "+ axisY);
+            textZ.setText("Z: "+ axisZ);
         }
 
         @Override

@@ -19,23 +19,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/aclX"
-        android:text="X"
+        android:text="X: 0.0"
         android:textSize="20sp"
+        android:textColor="@color/black"
         android:layout_margin="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/aclY"
-        android:text="Y"
+        android:textColor="@color/black"
+        android:text="Y: 0.0"
         android:textSize="20sp"
         android:layout_margin="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:id="@+id/aclZ"
-        android:text="Z"
+        android:text="Z: 0.0"
         android:textSize="20sp"
         android:layout_margin="10dp" />
 

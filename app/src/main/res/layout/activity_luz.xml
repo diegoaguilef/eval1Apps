@@ -19,14 +19,16 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="@string/txt_value" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edtLightValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColor="@color/black"
+        android:enabled="false"
         android:inputType="textPersonName"
-        android:hint="" />
+        android:hint="Lux: 0.0" />
 
 </LinearLayout>

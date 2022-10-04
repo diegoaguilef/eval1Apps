@@ -20,7 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvX"
-        android:text="X"
+        android:text="X: 0.0"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_margin="10dp" />
 
@@ -28,7 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvY"
-        android:text="Y"
+        android:textColor="@color/black"
+        android:text="Y: 0.0"
         android:textSize="20sp"
         android:layout_margin="10dp" />
 
@@ -36,7 +38,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvZ"
-        android:text="Z"
+        android:textColor="@color/black"
+        android:text="Z: 0.0"
         android:textSize="20sp"
         android:layout_margin="10dp" />
 

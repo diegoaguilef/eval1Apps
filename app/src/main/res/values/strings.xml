@@ -29,4 +29,5 @@
     <string name="yTitle">Y =</string>
     <string name="xTitle">X =</string>
     <string name="zTitle">Z =</string>
+    <string name="txt_value">Valor</string>
 </resources>

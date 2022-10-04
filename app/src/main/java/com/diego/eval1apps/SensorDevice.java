@@ -15,22 +15,22 @@ public class SensorDevice extends AppCompatActivity {
         setContentView(R.layout.activity_sensor_device);
 
     }
-    public void Lista(View view){
+    public void sensorsList(View view){
         Intent intent = new Intent(this, SensorsList.class);
         startActivity(intent);
     }
 
-    public void Giroscopio(View view){
+    public void gyroscopeView(View view){
         Intent intent = new Intent(this, Gyroscope.class);
         startActivity(intent);
     }
 
-    public void Luz(View view){
+    public void lightView(View view){
         Intent intent = new Intent(this, Light.class);
         startActivity(intent);
     }
 
-    public void Acelerometro(View view){
+    public void accelerometer(View view){
         Intent intent = new Intent(this, Acelerometro.class);
         startActivity(intent);
     }
